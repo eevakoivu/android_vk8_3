@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         seekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-                text2.setText(value);
+                text2.setText(String.valueOf(i));
                 value = i;
             }
 
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void addMoney(View v){
-        bottledispenser.addMoney(text);
+        bottledispenser.addMoney(text, value);
     }
 
     public void buyBottle(View v){
